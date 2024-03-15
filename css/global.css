@@ -3,3 +3,8 @@
         content-visibility: auto;
     }
 }
+
+section {
+    height: 100vh;
+    @apply bg-grey grid place-items-center
+}
