@@ -1,10 +1,11 @@
-@layer utilities {
-    .content-auto {
-        content-visibility: auto;
-    }
-}
-
 section {
     height: 100vh;
-    @apply bg-grey grid place-items-center
+    background: gray;
+    display: grid;
+    place-items: center;
+    border: 1px solid white;
+    color: white;
+    h1 {
+        font-size: 32px;
+    }
 }
