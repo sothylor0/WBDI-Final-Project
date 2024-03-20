@@ -11,23 +11,38 @@
     <title>Healer Hub</title>
 </head>
 <body>
+<div class="p-4 text-lg text-white absolute top-0 left-0 w-[100%] border border-b-gray-5" style="background: gray;">
+    <nav class="flex justify-between">
+        <div>
+            Logo
+        </div>
+        <ul class="flex flex-row gap-4">
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#doctors">Doctors</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div id="home" class="target:block hidden">
+    <section>
+        <h1>Healer Hub Hero Section</h1>
+    </section>
 
-<section>
-    <h1>Healer Hub Hero Section</h1>
-</section>
-
-<section>
-    <h1>Slider of sponsor hospital</h1>
-</section>
-
-<section>
-    <h1>Doctor List Section</h1>
-</section>
-
-<section>
-    <h1>Testimonial from customer</h1>
-</section>
-
+    <section style="height:20vh;">
+        <h1>Slider of sponsor logo</h1>
+    </section>
+    <section style="height:80vh;">
+        <h1>Testimonial from customer</h1>
+    </section>
+</div>
+<div id="doctors" class="target:block hidden">
+    <section>
+        <h1>Doctor List Section</h1>
+    </section>
+</div>
 <script src="js/index.js"></script>
 </body>
 </html>
