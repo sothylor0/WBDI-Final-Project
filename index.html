@@ -1,48 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind.config.js"></script>
     <link rel="stylesheet" href="css/global.css">
     <title>Healer Hub</title>
 </head>
 <body>
-<div class="p-4 text-lg text-white absolute top-0 left-0 w-[100%] border border-b-gray-5" style="background: gray;">
-    <nav class="flex justify-between">
-        <div>
-            Logo
+    <nav>
+        <div class="logo">
+            <img src="img/logo.svg" alt="Logo">
+            <div class="logo_text">
+                Medical <span>Center</span>
+            </div>
         </div>
-        <ul class="flex flex-row gap-4">
+        <ul>
             <li>
-                <a href="#home">Home</a>
+                <a href="/home">Home</a>
             </li>
             <li>
-                <a href="#doctors">Doctors</a>
+                <a href="/about">About</a>
+            </li>
+            <li>
+                <a href="/service">Our Service</a>
+            </li>
+            <li>
+                <a href="/doctor">Doctor</a>
             </li>
         </ul>
+        <button class="btn">Let's, talk</button>
     </nav>
-</div>
-<div id="home" class="target:block hidden">
-    <section>
-        <h1>Healer Hub Hero Section</h1>
-    </section>
+    <section id="hero">
+        <div class="hero_content">
+            <h6>Lorem Ipsum is simply</h6>
+            <h3>Lorem Ipsum is simply dummy standard dummy text ever since the 1500s</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the </p>
+            <button class="btn">Make an appointment</button>
+        </div>
+        <img src="img/doctor.png" alt="Doctor">
 
-    <section style="height:20vh;">
-        <h1>Slider of sponsor logo</h1>
     </section>
-    <section style="height:80vh;">
-        <h1>Testimonial from customer</h1>
+    <div class="specialities card">
+        <div class="speciality">
+            <div class="icon">
+                <img src="img/specializations.svg" alt="Specializations">
+                Specializations
+            </div>
+            <div class="description">
+                Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            </div>
+        </div>
+        <div class="speciality">
+            <div class="icon">
+                <img src="img/center_care.svg" alt="Centered care">
+                Centered care
+            </div>
+            <div class="description">
+                Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            </div>
+        </div>
+        <div class="speciality">
+            <div class="icon">
+                <img src="img/high_equipment.svg" alt="High end Equipment">
+                High end Equipment
+            </div>
+            <div class="description">
+                Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            </div>
+        </div>
+    </div>
+    <section id="about">
+        <div class="header_block">
+            <h3 class="header_content">
+                <span>Lorem Ipsum</span> is simply dummy standard dummy text ever since the 1500s
+            </h3>
+            <div class="badge">
+                About us
+            </div>
+        </div>
+<!--        <div class="about_content">-->
+<!--            <div class="img_grid">-->
+<!--                <img src="" alt="">-->
+<!--                <img src="" alt="">-->
+<!--                <img src="" alt="">-->
+<!--            </div>-->
+<!--            <div class="content">-->
+<!--                <h6>Lorem Ipsum ...</h6>-->
+<!--                <p>-->
+<!--                    <span>Lorem</span> Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s-->
+<!--                </p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <button class="btn">Make an appointment</button>-->
+        <div class="award_list">
+            <div class="top">
+                <div class="period">1989 - 2024</div>
+                <div class="badge">Award</div>
+            </div>
+            <div class="awards">
+                <div class="award">
+                    <div class="icon">
+                        <img src="img/specializations.svg" alt="Specializations">
+                        Specializations
+                    </div>
+                    <div class="description">
+                        Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    </div>
+                </div>
+                <div class="award">
+                    <div class="icon">
+                        <img src="img/center_care.svg" alt="Centered care">
+                        Centered care
+                    </div>
+                    <div class="description">
+                        Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    </div>
+                </div>
+                <div class="award">
+                    <div class="icon">
+                        <img src="img/high_equipment.svg" alt="High end Equipment">
+                        High end Equipment
+                    </div>
+                    <div class="description">
+                        Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    </div>
+                </div>
+                <div class="award">
+                    <div class="icon">
+                        <img src="img/high_equipment.svg" alt="High end Equipment">
+                        High end Equipment
+                    </div>
+                    <div class="description">
+                        Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-</div>
-<div id="doctors" class="target:block hidden">
-    <section>
-        <h1>Doctor List Section</h1>
-    </section>
-</div>
 <script src="js/index.js"></script>
 </body>
 </html>
