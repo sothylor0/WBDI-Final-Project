@@ -13,8 +13,8 @@
 }
 body {
     max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto!important;
+    margin-right: auto!important;
 }
 
 
@@ -105,7 +105,6 @@ nav {
 }
 
 section {
-    height: 100vh;
     color: white;
     position: relative;
 }
@@ -129,6 +128,7 @@ section#hero {
     color: white;
     width: 100%;
     .hero_content {
+        max-width: 50%;
         h6 {
             font-weight: normal;
             font-size: 20px;
@@ -149,6 +149,7 @@ section#hero {
     img {
         width: 579px;
         height: 768px;
+        max-height: 80vh;
     }
 }
 .specialities {
@@ -248,6 +249,7 @@ section#about {
             display: flex;
             position: relative;
             width: 100%;
+            margin-bottom: 48px;
             .period {
                 text-decoration: underline;
             }
@@ -292,5 +294,54 @@ section#about {
         left: 50%;
         bottom: -50%;
         background: var(--light-green);
+    }
+}
+section#our_service {
+    padding: 48px 80px;
+    .top {
+        display: flex;
+        position: relative;
+        flex-direction: row-reverse;
+        width: 100%;
+        margin-bottom: 48px;
+        .period {
+            text-decoration: underline;
+        }
+        .badge {
+            padding-left: 32px;
+            padding-right: 32px;
+
+        }
+    }
+    .services {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 60px;
+        .service {
+            border: 1px solid var(--light-blue);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            img {
+                height: 260px;
+                object-fit: cover;
+                object-position: center;
+            }
+            .content {
+                padding: 12px 20px;
+                h6 {
+                    color: var(--light-blue);
+                }
+                p {
+                    color: var(--black);
+                }
+                button {
+                    color: var(--light-green);
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
     }
 }
