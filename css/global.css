@@ -176,6 +176,7 @@ section#hero {
             }
         }
         .description {
+            text-align: center;
             color: black;
             font-size: 11px;
         }
@@ -282,6 +283,7 @@ section#about {
                 }
 
                 .description {
+                    text-align: center;
                     color: black;
                     font-size: 11px;
                 }

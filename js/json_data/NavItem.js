@@ -1,20 +1,26 @@
+export const Logo = () => {
+    return {
+      name: "Medical <span>Center</span>",
+      img: "img/logo.svg"
+    }
+}
 export const NavItem = () => {
   return [
     {
       name: 'Home',
-      href: '#'
+      href: '/home'
     },
     {
-      name: 'Home',
-      href: '#'
+      name: 'About',
+      href: '/about'
     },
     {
-      name: 'Home',
-      href: '#'
+      name: 'Our Service',
+      href: '/service'
     },
     {
-      name: 'Home',
-      href: '#'
+      name: 'Doctor',
+      href: '/doctor'
     }
   ];
 }
