@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <title>Healer Hub</title>
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <img src="img/logo.svg" alt="Logo">
+        <div class="logo_text">
+            Medical <span>Center</span>
+        </div>
+    </div>
+    <ul id="dynamic_nav">
+        <li>
+            <a href="/home">Home</a>
+        </li>
+        <li>
+            <a href="/about">About</a>
+        </li>
+        <li>
+            <a href="/service">Our Service</a>
+        </li>
+        <li>
+            <a href="/doctor">Doctor</a>
+        </li>
+    </ul>
+    <button class="btn">Let's, talk</button>
+</nav>
+<section id="doctor_hero">
+    <div class="hero_content">
+        <h6>Lorem Ipsum is simply </h6>
+        <h3>Doctor List Lorem Ipsum is simply</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the </p>
+    </div>
+</section>
+<section id="doctor_list">
+    <div class="header_block">
+        <h3>Doctor List</h3>
+        <button class="btn">Make an appointment</button>
+    </div>
+    <div class="list">
+        <aside>
+            <div class="search_bar">
+                <label class="input_wrapper">
+                    <i class="search_icon"></i>
+                    <input type="text" name="search">
+                </label>
+            </div>
+            <div class="filters">
+                <div class="filter">
+<!--                    <div class="title_block">-->
+<!--                        <input id="all" type="checkbox" name="all">-->
+<!--                        <label class="title" for="all">All Doctors</label>-->
+<!--                    </div>-->
+<!--                    Plan on adding bulk-select part if need to-->
+                    <h6>All Doctor</h6>
+                    <div class="checklist">
+                        <label>
+                            <input type="checkbox">
+                            Morning
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            Afternoon
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            Night
+                        </label>
+                    </div>
+                </div>
+                <div class="filter">
+                    <!--                    <div class="title_block">-->
+                    <!--                        <input id="all" type="checkbox" name="all">-->
+                    <!--                        <label class="title" for="all">All Doctors</label>-->
+                    <!--                    </div>-->
+                    <!--                    Plan on adding bulk-select part if need to-->
+                    <h6>All Doctor</h6>
+                    <div class="checklist">
+                        <label>
+                            <input type="checkbox">
+                            Morning
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            Afternoon
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            Night
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Sex</th>
+                <th>Shift</th>
+                <th>Department</th>
+                <th>Number</th>
+                <th>Availability</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="avatar"></div>
+                    Jessica Chan
+                </td>
+                <td>Female</td>
+                <td>Night </td>
+                <td>Cardiologist</td>
+                <td>094 342 232</td>
+                <td>
+                    <div class="badge">Available</div>
+                    <div class="more" onclick="console.log('collapse')">...</div>
+                </td>
+            </tr>
+            <tr class="collapse_row">
+                <td colspan="6">
+                    <table>
+                        <tr>
+                            <th>Experience</th>
+                            <th>Rating</th>
+                            <th>Language</th>
+                            <th>Qualifications</th>
+                            <th>Email</th>
+                            <th>Book now</th>
+                        </tr>
+                        <tr>
+                            <td>10 Years</td>
+                            <td>4.6*</td>
+                            <td>English</td>
+                            <td>MD / DO</td>
+                            <td>jessica@gmail.com</td>
+                            <td><button>Book</button></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="avatar"></div>
+                    Jessica Chan
+                </td>
+                <td>Female</td>
+                <td>Night </td>
+                <td>Cardiologist</td>
+                <td>094 342 232</td>
+                <td>
+                    <div class="badge">Available</div>
+                    <div class="more" onclick="console.log('collapse')">...</div>
+                </td>
+            </tr>
+            <tr class="collapse_row">
+                <td colspan="6">
+                    <table>
+                        <tr>
+                            <th>Experience</th>
+                            <th>Rating</th>
+                            <th>Language</th>
+                            <th>Qualifications</th>
+                            <th>Email</th>
+                            <th>Book now</th>
+                        </tr>
+                        <tr>
+                            <td>10 Years</td>
+                            <td>4.6*</td>
+                            <td>English</td>
+                            <td>MD / DO</td>
+                            <td>jessica@gmail.com</td>
+                            <td><button>Book</button></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<script src="js/index.js" type="module"></script>
+</body>
+</html>
