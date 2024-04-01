@@ -5,6 +5,7 @@ import {Speciality} from './json_data/Specialites.js';
 import {About} from './json_data/About.js';
 import {Award} from './json_data/Award.js';
 import {Service} from './json_data/Service.js';
+import {DoctorHero, Doctors} from './json_data/Doctor.js';
 
 $(document).ready(function () {
   initLogo();
@@ -14,6 +15,8 @@ $(document).ready(function () {
   initAboutUS();
   initAward();
   initService();
+  initDoctorHero();
+  initDoctorList();
 });
 
 const initLogo = () => {
@@ -123,4 +126,110 @@ const initService = () => {
       ${html.length > 0 ? html.join('\n') : ''}
       </div>
   `)
+}
+const initDoctorHero = () => {
+  const hero = $('#doctor_hero');
+  const heroData = DoctorHero();
+  hero.find('.hero_content h6').html(heroData.title);
+  hero.find('.hero_content h3').html(heroData.main_title);
+  hero.find('.hero_content p').html(heroData.description);
+}
+const initDoctorList = () => {
+  const list = $('.list');
+  const filters = list.find('.filters');
+  const doctors = Doctors();
+  const htmlFilter = doctors.map((item) => {
+    return `
+      <label>
+        <input id="filter-data" type="checkbox" data-target="${item.department}">
+        ${item.department}
+      </label>
+    `
+  })
+  filters.find('.checklist').html(htmlFilter);
+  filterDoctor(list.find('table'),doctors);
+  reinitFilter();
+}
+
+const filterDoctor = (table,doctors) => {
+  table.empty();
+  const header = `
+  <tr>
+    <th>Name</th>
+    <th>Sex</th>
+    <th>Shift</th>
+    <th>Department</th>
+    <th>Number</th>
+    <th>Availability</th>
+  </tr>
+  `
+  const html = doctors.map((item) => {
+    const anotherHtml = `
+      <tr class="collapse_row">
+                <td colspan="6">
+                    <table>
+                        <tr>
+                            <th>Experience</th>
+                            <th>Rating</th>
+                            <th>Language</th>
+                            <th>Qualifications</th>
+                            <th>Email</th>
+                            <th>Book now</th>
+                        </tr>
+                        <tr>
+                            <td>${item.collapse.experience}</td>
+                            <td>${item.collapse.rating}</td>
+                            <td>${item.collapse.language}</td>
+                            <td>${item.collapse.qualifications}</td>
+                            <td>${item.collapse.email}</td>
+                            <td><button>Book</button></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+    `;
+    return `
+    <td>
+                    <div class="avatar"></div>
+                    ${item.name}
+                </td>
+                <td>${item.sex}</td>
+                <td>${item.shift}</td>
+                <td>${item.department}</td>
+                <td>${item.phone}</td>
+                <td>
+                    <div class="badge">Available</div>
+                    <div class="more" onclick="console.log('collapse')">...</div>
+                </td>
+                ${anotherHtml}
+    `
+  })
+  table.html(header + html)
+}
+let FILTER_LIST = new Set();
+const reinitFilter = () => {
+  $('input[type=checkbox]').on('change', () => {
+      const button = $('input[type=checkbox]');
+      button.each((i, el) => {
+        const target = $(el).data('target');
+        if($(el).is(':checked')){
+          FILTER_LIST.add(target);
+        }else{
+          FILTER_LIST.delete(target);
+        }
+      })
+      
+    const list = $('.list');
+    const table = list.find('table');
+      
+      if(FILTER_LIST.size === 0){
+        initDoctorList();
+      }else{
+        const Docs = Doctors();
+        const filter = Docs.filter((item) => {
+          return FILTER_LIST.has(item.department);
+        })
+          filterDoctor(table, filter);
+      }
+  });
 }
