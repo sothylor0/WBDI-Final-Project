@@ -1,26 +1,26 @@
 export const Logo = () => {
     return {
-      name: "Medical <span>Center</span>",
+      name: "ហាង <span>គ្រូខ្មែរ</span>",
       img: "img/logo.svg"
     }
 }
 export const NavItem = () => {
   return [
     {
-      name: 'Home',
-      href: '/home'
+      name: 'គេហទំព័រដើម',
+      href: '/'
     },
     {
-      name: 'About',
+      name: 'តារាងគ្រូថ្នាំ',
+      href: '/doctor'
+    },
+    {
+      name: 'អំពីយើង',
       href: '/about'
     },
     {
-      name: 'Our Service',
+      name: 'សេវាកម្ម',
       href: '/service'
-    },
-    {
-      name: 'Doctor',
-      href: '/doctor'
     }
   ];
 }

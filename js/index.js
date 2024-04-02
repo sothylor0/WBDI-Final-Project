@@ -147,64 +147,38 @@ const initDoctorList = () => {
     `
   })
   filters.find('.checklist').html(htmlFilter);
-  filterDoctor(list.find('table'),doctors);
+  filterDoctor(list.find('table'), doctors);
   reinitFilter();
 }
 
 const filterDoctor = (table,doctors) => {
   table.empty();
   const header = `
-  <tr>
-    <th>Name</th>
-    <th>Sex</th>
-    <th>Shift</th>
-    <th>Department</th>
-    <th>Number</th>
-    <th>Availability</th>
-  </tr>
+    <thead>
+      <tr>
+        <th>ឈ្មោះ</th>
+        <th>ភេទ</th>
+        <th>វេន</th>
+        <th>ផ្នែក</th>
+        <th>លេខទូរស័ព្ទ</th>
+      </tr>
+    </thead>
   `
-  const html = doctors.map((item) => {
-    const anotherHtml = `
-      <tr class="collapse_row">
-                <td colspan="6">
-                    <table>
-                        <tr>
-                            <th>Experience</th>
-                            <th>Rating</th>
-                            <th>Language</th>
-                            <th>Qualifications</th>
-                            <th>Email</th>
-                            <th>Book now</th>
-                        </tr>
-                        <tr>
-                            <td>${item.collapse.experience}</td>
-                            <td>${item.collapse.rating}</td>
-                            <td>${item.collapse.language}</td>
-                            <td>${item.collapse.qualifications}</td>
-                            <td>${item.collapse.email}</td>
-                            <td><button>Book</button></td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-    `;
-    return `
-    <td>
-                    <div class="avatar"></div>
-                    ${item.name}
-                </td>
+  const html = doctors.map((item, index) => {
+    return `<tr class="${index % 2 === 0 ? 'even' : 'odd'}">
+                <td>${item.name}</td>
                 <td>${item.sex}</td>
                 <td>${item.shift}</td>
                 <td>${item.department}</td>
-                <td>${item.phone}</td>
-                <td>
-                    <div class="badge">Available</div>
-                    <div class="more" onclick="console.log('collapse')">...</div>
-                </td>
-                ${anotherHtml}
+                <td>${item.number}</td>
+              </tr>
     `
   })
-  table.html(header + html)
+  table.html(header + `
+    <tbody>
+        ${html}
+    </tbody>
+  `)
 }
 let FILTER_LIST = new Set();
 const reinitFilter = () => {
