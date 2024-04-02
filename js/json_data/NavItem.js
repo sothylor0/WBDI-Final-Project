@@ -12,15 +12,15 @@ export const NavItem = () => {
     },
     {
       name: 'តារាងគ្រូថ្នាំ',
-      href: '/doctor'
+      href: '/doctor.html'
     },
     {
       name: 'អំពីយើង',
-      href: '/about'
+      href: '/#about'
     },
     {
       name: 'សេវាកម្ម',
-      href: '/service'
+      href: '/#our_service'
     }
   ];
 }

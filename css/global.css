@@ -307,7 +307,7 @@ section#about {
     }
 }
 section#our_service {
-    padding: 48px 80px;
+    padding: 48px 20px;
     .top {
         display: flex;
         position: relative;
