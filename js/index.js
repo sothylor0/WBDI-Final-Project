@@ -138,7 +138,12 @@ const initDoctorList = () => {
   const list = $('.list');
   const filters = list.find('.filters');
   const doctors = Doctors();
+  const filterList = new Set();
   const htmlFilter = doctors.map((item) => {
+    if(filterList.has(item.department)){
+      return;
+    }
+    filterList.add(item.department);
     return `
       <label>
         <input id="filter-data" type="checkbox" data-target="${item.department}">
@@ -183,6 +188,7 @@ const filterDoctor = (table,doctors) => {
 let FILTER_LIST = new Set();
 const reinitFilter = () => {
   $('input[type=checkbox]').on('change', () => {
+      const val = $('input[name=search]').val();
       const button = $('input[type=checkbox]');
       button.each((i, el) => {
         const target = $(el).data('target');
@@ -201,9 +207,28 @@ const reinitFilter = () => {
       }else{
         const Docs = Doctors();
         const filter = Docs.filter((item) => {
+          if(val){
+            return FILTER_LIST.has(item.department) && item.name.includes(val);
+          }
           return FILTER_LIST.has(item.department);
         })
           filterDoctor(table, filter);
       }
   });
 }
+$('input[name=search]').on('keyup', () => {
+  const val = $('input[name=search]').val();
+  let Doctor = Doctors();
+  if(FILTER_LIST.size !== 0){
+    Doctor = Doctor.filter((item) => {
+      return FILTER_LIST.has(item.department);
+    })
+  }
+  const finalDoctor = Doctor.filter((item) => {
+    return item.name.includes(val);
+  })
+  const list = $('.list');
+  const table = list.find('table');
+  filterDoctor(table, finalDoctor);
+  
+})
