@@ -8,19 +8,19 @@ export const NavItem = () => {
   return [
     {
       name: 'គេហទំព័រដើម',
-      href: '/'
+      href: 'index.html'
     },
     {
       name: 'តារាងគ្រូថ្នាំ',
-      href: '/doctor.html'
+      href: 'doctor.html'
     },
     {
       name: 'អំពីយើង',
-      href: '/#about'
+      href: 'index.html#about'
     },
     {
       name: 'សេវាកម្ម',
-      href: '/#our_service'
+      href: 'index.html#our_service'
     }
   ];
 }
