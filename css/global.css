@@ -378,7 +378,6 @@ section#doctor_hero {
             font-size: 46px;
             font-weight: bold;
             color: var(--blue);
-            line-height: 1;
         }
         p {
             margin: 32px 0;
