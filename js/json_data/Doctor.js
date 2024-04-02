@@ -1,8 +1,8 @@
 export const DoctorHero = () => {
   return {
-    title: "MOK THY",
-    main_title: "MOK THY",
-    description: "Lorem Ipsum is simply dummy text of the printim Ipsum has been the industry's standard dummy text ever since the",
+    title: "ជំរើសដ៍ល្អបំផុតសម្រាប់អ្នក",
+    main_title: "បញ្ជីវេជ្ជបណ្ឌិតដ៏ទូលំទូលាយ",
+    description: "ស្វែងរកបណ្តាញគ្រូពេទ្យ និងអ្នកឯកទេសដែលមានសមត្ថភាពខ្ពស់របស់យើង។ ស្វែងរកតាមទីតាំង ឯកទេស ធានារ៉ាប់រង និងច្រើនទៀត។ សុខភាពរបស់អ្នកមានសារៈសំខាន់ចំពោះយើង - ស្វែងរកវេជ្ជបណ្ឌិតដែលថែទាំអ្នក និងសហគមន៍របស់អ្នក។",
   };
 }
 export const Doctors = () => {

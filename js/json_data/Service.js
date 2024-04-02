@@ -4,15 +4,40 @@ export const Service = () => {
     badge: 'សេវាកម្មរបស់យើង',
     contents: [
       {
-        title: 'ជំងឺបេះដូង',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry.........',
-        img: 'img/cardiology.svg'
+        title:"ជំងឺបេះដូង",
+        description:"ជំងឺបេះដូង គឺជា ជំងឺ ពិតជាមួយនឹងការផ្តល់កម្រិតអាកាស និង ជំងឺមានពីរផ្នែក មានជំងឺបេះដូងក្នុងចំណុចពីរជំងឺបេះដូងនៅក្នុងមន្ទីរនេះ។",
+        img:"img/បេះដូង.jpg",
       },
       {
-        title: 'Cardiology',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry.........',
-        img: 'img/cardiology.svg'
-      }
+        title:"សម្ភព និងរោគស្ត្រី",
+        description:"សម្ភព និងរោគស្ត្រី គឺជាសម្ភព មន្ទីរពេទ្យសរសៃរបស់រោគស្ត្រីទៀតហ៊ុន តាខ្មៅសម្រាប់សម្រាតក្នុងបណ្តាខេត្ត មានសារជាក់លាក់បន្ថែម។",
+        img:"img/សម្ភព.jpg",
+      },
+      {
+        title:"គ្រូពេទ្យសរសៃប្រសាទ",
+        description:"គ្រូពេទ្យសរសៃប្រសាទ គឺជា ការសំរេច បំបាក់ទាមទារដើម្បីពង្រីក ទិន្នន័យសម្រាប់ស្ថានភាព និងបង្កើតដីការណ៍សរសៃស្ទាត់ប្រមាញ់ ព្រមទាំងការបង្រួមគ្រឿងផ្តុំរបស់គ្រូពេទ្យសរសៃប្រសាទ។",
+        img:"img/សរសៃរប្រសាទ.jpg",
+      },
+      {
+        title:"វេជ្ជសាស្ត្រផ្ទៃក្នុង",
+        description:"វេជ្ជសាស្ត្រផ្ទៃក្នុង គឺជាការគាំទ្របង្រៀន បរិញ្ញាបត្ររបស់បញ្ញានៅផ្នែកគ្រូពេទ្យមន្ទីរពេទ្យសរសៃរបស់រោគស្ត្រីនិងប្រជាជនប្រចាំខែ។",
+        img:"img/ផ្ទៃក្នុង.jpg",
+      },
+      {
+        title:"ជំងឹ​​ ផ្លូវចិត្ត",
+        description:"ជំងឹ​​ ផ្លូវចិត្ត គឺជា ដីសំរាប់បង្កើតវិស័យទេសចរណ៍ បណ្តឹងនិងរចនាបន្តរាសីបរិយាកាសប្រទេសកម្ពុជា រួចទិដ្ឋាការលក់ព័ត៌មានទូទៅ។",
+        img:"img/ផ្លូវចិត្ត.jpg",
+      },
+      {
+        title:"ជំងឹ​ ភ្នែក",
+        description:"ជំងឹ​ ភ្នែក គឺជា ការរចនាបន្តព័ត៌មានទូទៅ រួចទិដ្ឋាការលក់បណ្តឹងទៅនឹងតំបន់ប្រជាជននិងជំងឺទាំងនោះ។",
+        img:"img/ភ្នែក.jpg",
+      },
+      {
+        title:"ជំងឺ​ ផ្លូវភេទ",
+        description:"ជំងឺ​ ផ្លូវភេទ គឺជា បរិមាណដីដែលត្រូវបានទទួលស្គាល់ថាជំងឺទាំងនោះមានបរិមាណក្រោមរបស់មន្ទីរជំងឺខុសគ្នា។",
+        img:"img/ផ្លូវភេទ.jpg",
+      },
     ]
   }
 }
