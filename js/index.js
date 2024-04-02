@@ -138,7 +138,12 @@ const initDoctorList = () => {
   const list = $('.list');
   const filters = list.find('.filters');
   const doctors = Doctors();
+  const filterList = new Set();
   const htmlFilter = doctors.map((item) => {
+    if(filterList.has(item.department)){
+      return;
+    }
+    filterList.add(item.department);
     return `
       <label>
         <input id="filter-data" type="checkbox" data-target="${item.department}">
